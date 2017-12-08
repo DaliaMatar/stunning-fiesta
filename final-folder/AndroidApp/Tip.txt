@@ -1,0 +1,1 @@
+Full android application was too large to upload on git, took only the source files of the application.
