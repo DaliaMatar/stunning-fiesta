@@ -5,7 +5,6 @@
 
 //Class used to make use of buttons and buzzers on an Arduino for the digi-smart clock.
 
-
 //initialize all variable pins
 int touchPin = 11;
 int buzzerPin = 9;
@@ -26,8 +25,6 @@ void setup() {
  pinMode(touchPin, INPUT);
  pinMode (buttonPin, OUTPUT);
  
- //boolean alarmOn = Serial.read();
- 
 }
 
 void loop() {
@@ -46,7 +43,6 @@ void loop() {
     }
   } 
   //check status of the Touch Sensor
-
   if(digitalRead(touchPin) == HIGH && pressed % 2 == 0) {
     pressed++;
     sendData(LCD_ON);
@@ -60,8 +56,6 @@ void loop() {
   }
 }
 
-
-
 /* Method used to sound the active Buzzer, uses built-in libraries, 
  * such as Tone and noTone and delays to make an alarm-clock noise. 
  */
@@ -70,7 +64,6 @@ void toggleBuzzer(){
   delay(500);
   noTone(buzzerPin);
   delay(500);
-  
 }
 
 /* Method used to turn off the active buzzer off, this method 
